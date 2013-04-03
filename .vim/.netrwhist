@@ -1,2 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/Doug/Code/Ruby'
+let g:netrw_dirhist_2='/Users/Doug/Code/C/ps2/Part1'
+let g:netrw_dirhist_3='/Users/Doug/proj2'
+let g:netrw_dirhist_4='/Users/Doug/proj2/project2'
+let g:netrw_dirhist_5='/Users/Doug/Code/MOOC-TA-Management'

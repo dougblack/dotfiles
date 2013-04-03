@@ -83,6 +83,7 @@ nnoremap k gk
 
 "=== Makefile ===
 nnoremap <leader>m :silent make\|redraw!\|cw<CR>
+nnoremap <leader>w :NERDTree<CR>
 
 "=== macvim options ===
 set guioptions-=r 
