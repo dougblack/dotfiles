@@ -4,15 +4,21 @@
 set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
+set gfn=Menlo:h11
+let g:molokai_original=1
 "let g:solarized_termcolors=256
-:colorscheme molokai   " use ~/.vim/colors/ir_black.vim colorscheme
+"let g:solarized_contrast="high"
+colorscheme molokai    " use ~/.vim/colors/ir_black.vim colorscheme
+filetype indent on
+set autoindent
+set wildmenu
+set lazyredraw
 
 "=== tabbing ===
-set tabstop=2           " 2 space tab
+set tabstop=4           " 3 space tab
 set expandtab			" use spaces for tabs
-set softtabstop=2       " 2 space tab
-set shiftwidth=2        " 4 space tab
-filetype indent on
+set softtabstop=4       " 3 space tab
+set shiftwidth=4        " 3 space tab
 
 "=== interface extras ===
 set number				" show line numbers
@@ -55,11 +61,13 @@ nnoremap <S-space> zM
 nnoremap _ ddp
 nnoremap - ddkkp
 
+
 "=== Shortcuts ===
 let mapleader=","
 nnoremap <leader>m :silent make\|redraw!\|cw<CR> 
-nnoremap <leader>t :TlistOpen<CR>
+nnoremap <leader>t :CommandT<CR>
 nnoremap <leader>w :NERDTree<CR>
+nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>h :A<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -96,7 +104,7 @@ au VimEnter * highlight clear SignColumn
 "=== powerline settings ===
 set laststatus=2
 set encoding=utf-8
-"let g:Powerline_symbols = 'fancy' " powerline arrow things
+let g:Powerline_symbols = 'compatible' " powerline arrow things
 
 "=== backup ===
 " backup to ~/.tmp 
