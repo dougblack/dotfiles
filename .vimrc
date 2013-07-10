@@ -4,8 +4,9 @@
 set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
-set gfn=Menlo:h11
+set gfn=Menlo:h12
 let g:molokai_original=1
+let g:CommandTMaxHeight = 10
 "let g:solarized_termcolors=256
 "let g:solarized_contrast="high"
 colorscheme molokai    " use ~/.vim/colors/ir_black.vim colorscheme
@@ -48,7 +49,7 @@ inoremap { {}<Left>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap {{ {
 inoremap }} }
-inoremap {} v}
+inoremap {} {}
 inoremap { {}<Left>
 
 "=== editing long lines ===
@@ -71,9 +72,19 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>h :A<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>l :call ToggleNumber()<CR>
+nnoremap <leader>/ :noh<CR>
+nnoremap <leader>s :mksession<CR>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
+function! ToggleNumber()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
 
 "=== launch configurations ===
 runtime! debian.vim
