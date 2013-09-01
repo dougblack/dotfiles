@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/dblack/code/flask-restful/.git'
-let g:netrw_dirhist_2='/Users/dblack/code/pytwilio.db/pytwilio/db/config'
-let g:netrw_dirhist_3='/Users/dblack/code/starship'
-let g:netrw_dirhist_4='/Users/dblack/code/starship/tests/integration'
+let g:netrw_dirhist_cnt =0
