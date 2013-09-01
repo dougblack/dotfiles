@@ -1,0 +1,32 @@
+# Bind's directives: bind key:modifiers operation parameter+
+#                     bind key:modal-key operation parameter+
+
+# Alias - set variable things
+alias tophalf     move screenOriginX;screenOriginY                             screenSizeX;screenSizeY/2
+alias bottomhalf  move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX;screenSizeY/2
+alias lefthalf    move screenOriginX;screenOriginY                             screenSizeX/2;screenSizeY
+alias righthalf   move screenOriginX+screenSizeX/2;screenOriginY               screenSizeX/2;screenSizeY
+alias topleft     move screenOriginX;screenOriginY                             screenSizeX/2;screenSizeY/2
+alias topright    move screenOriginX+screenSizeX/2;screenOriginY               screenSizeX/2;screenSizeY/2
+alias bottomleft  move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX/2;screenSizeY/2
+alias bottomright move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+alias full        move screenOriginX;screenOriginY                             screenSizeX;screenSizeY
+ 
+# Location - Sets the window to the specified location.
+bind return:shift;cmd ${full}
+bind k:shift;cmd ${tophalf}
+bind j:shift;cmd ${bottomhalf}
+bind h:shift;cmd ${lefthalf}
+bind b:shift;cmd ${bottomleft}
+bind y:shift;cmd ${topleft}
+bind l:shift;cmd ${righthalf}
+bind .:shift;cmd ${bottomright}
+ 
+# Resize - Resizes the window in the specified direction
+bind l:alt resize +1% +0
+ 
+# Nudge - Nudges the window in the specified direction                                                               
+bind l:shift;alt nudge +1% +0
+ 
+# Focus - Brings the focus to the window in the specified position                                     
+bind l:shift;ctrl focus right
