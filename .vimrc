@@ -4,17 +4,18 @@
 set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
-set gfn=Menlo:h12
-"let g:molokai_original=1
+"set gfn=Menlo:h12
+let g:molokai_original=1
 let g:CommandTMaxHeight = 10
 let g:solarized_termcolors = 16
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme molokai
 filetype indent on
 set autoindent
 set wildmenu
 set lazyredraw
 set ttyfast
+set backspace=indent,eol,start
 
 "=== tabbing ===
 set tabstop=4           " 3 space tab
@@ -66,15 +67,14 @@ nnoremap k gk
 " == Folding ===
 nnoremap <space> za
 nnoremap <S-space> zM
-" Move lines
-nnoremap _ ddp
-nnoremap - ddkkp
 
 
 "=== Shortcuts ===
 let mapleader=","
+nnoremap B ^
+nnoremap E $
 nnoremap <leader>m :silent make\|redraw!\|cw<CR>
-nnoremap <leader>t :CtrlP<CR>
+"nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>w :NERDTree<CR>
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>h :A<CR>
@@ -85,17 +85,21 @@ nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
 nnoremap <leader>a :Ag 
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
-nnoremap <leader>n :call ToggleNoNumber()<CR>
+nnoremap <leader>1 :call ToggleNoNumber()<CR>
+nnoremap <leader>d :Make! 
+nnoremap <leader>r :call RunTestFile()<CR>
 nmap gV `[v`]
 inoremap jk <esc>
 inoremap <esc> <nop>
+nnoremap $ <nop>
+nnoremap ^ <nop>
 
 "=== powerline settings ===
 set laststatus=2
 set encoding=utf-8
-let g:Powerline_symbols = 'compatible' " powerline arrow things
-let g:Powerline_theme = 'long'
-let g:Powerline_colorscheme = 'solarized16_dark'
+let g:Powerline_symbols = 'compatible'
+"let g:Powerline_theme = 'long'
+"let g:Powerline_colorscheme = 'solarized16_dark'
 
 "=== ctrlp settings ===
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -164,6 +168,10 @@ au FileType java set list
 au FileType java set list
 au FileType java set listchars=tab:+\ ,eol:¬
 au FileType java set formatprg=par\ -w80\ -T4
+au FileType ruby set tabstop=2
+au FileType ruby set shiftwidth=2
+au FileType ruby set softtabstop=2
+au BufEnter *.cls set filetype=java
 
 
 "=== backup ===
@@ -189,3 +197,10 @@ function! ToggleNoNumber()
         set number
     endif
 endfunc
+
+function! RunTestFile()
+    if(&ft=='python')
+        exec ":!" . ". venv/bin/activate; nosetests " .bufname('%') . " --stop"
+    endif
+endfunction
+

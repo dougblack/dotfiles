@@ -15,8 +15,11 @@ alias log=". ~/.githelpers && pretty_git_log"
 alias ll="ls -la"
 alias va=". venv/bin/activate"
 alias da="deactivate"
+alias diff="git diff"
 alias psg="ps aux | grep"
 alias h="history"
+alias gpom="git pull origin master"
+alias files="find . -name "
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -44,6 +47,55 @@ setopt MENU_COMPLETE
 
 # Use vim cli mode
 set -o vi
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# urxvt (and family) accepts even #RRGGBB
+INSERT_PROMPT="gray"
+COMMAND_PROMPT="red"
+
+# helper for setting color including all kinds of terminals
+set_prompt_color() {
+    if [[ $TERM = "linux" ]]; then
+       # nothing
+    elif [[ $TMUX != '' ]]; then
+        printf '\033Ptmux;\033\033]12;%b\007\033\\' "$1"
+    else
+        echo -ne "\033]12;$1\007"
+    fi
+}
+
+# change cursor color basing on vi mode
+zle-keymap-select () {
+    if [ $KEYMAP = vicmd ]; then
+        set_prompt_color $COMMAND_PROMPT
+    else
+        set_prompt_color $INSERT_PROMPT
+    fi
+}
+
+zle-line-finish() {
+    set_prompt_color $INSERT_PROMPT
+}
+
+zle-line-init () {
+    zle -K viins
+    set_prompt_color $INSERT_PROMPT
+}
+
+zle -N zle-keymap-select
+zle -N zle-line-init
+zle -N zle-line-finish
 
 zstyle ':completion:*:*:vi:*:*files' ignored-patterns '*.egg' '*.egg-info'
 
@@ -71,3 +123,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+alias ls="CLICOLOR_FORCE=1 ls -G"
+alias less="less -R"
