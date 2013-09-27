@@ -15,7 +15,7 @@
 
 HASH="%C(yellow)%h%Creset"
 RELATIVE_TIME="%Cgreen(%ar)%Creset"
-AUTHOR="%C(bold blue)<%an>%Creset"
+AUTHOR="%C(bold blue)[%an]%Creset"
 REFS="%C(bold red)%d%Creset"
 SUBJECT="%s"
 
@@ -57,4 +57,18 @@ pretty_git_log() {
         sed -Ee "s/(Merge branch .* into .*$)/$(printf $ANSI_RED)\1$(printf $ANSI_RESET)/" |
         # Page only if we need to
         less -FXRS
+}
+
+git_branch() {
+   git symbolic-ref --short HEAD
+}
+
+push_branch() {
+    BRANCH=$(git_branch)
+    git push origin $BRANCH
+}
+
+pull_branch() {
+    BRANCH=$(git_branch)
+    git push origin $BRANCH
 }

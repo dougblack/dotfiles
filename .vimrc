@@ -4,11 +4,9 @@
 set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
-"set gfn=Menlo:h12
 let g:molokai_original=1
 let g:CommandTMaxHeight = 10
-let g:solarized_termcolors = 16
-let g:solarized_contrast = "high"
+"let g:solarized_termcolors = 16
 colorscheme molokai
 filetype indent on
 set autoindent
@@ -16,6 +14,7 @@ set wildmenu
 set lazyredraw
 set ttyfast
 set backspace=indent,eol,start
+set scrolloff=3
 
 "=== tabbing ===
 set tabstop=4           " 3 space tab
@@ -88,6 +87,7 @@ nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :call ToggleNoNumber()<CR>
 nnoremap <leader>d :Make! 
 nnoremap <leader>r :call RunTestFile()<CR>
+nnoremap <leader>d :CtrlPTag<CR>
 nmap gV `[v`]
 inoremap jk <esc>
 inoremap <esc> <nop>
@@ -171,6 +171,8 @@ au FileType java set formatprg=par\ -w80\ -T4
 au FileType ruby set tabstop=2
 au FileType ruby set shiftwidth=2
 au FileType ruby set softtabstop=2
+au FileType ruby set commentstring=#\ %s
+au FileType python set commentstring=#\ %s
 au BufEnter *.cls set filetype=java
 
 

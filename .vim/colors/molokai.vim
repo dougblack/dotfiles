@@ -108,7 +108,7 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 
 if s:molokai_original == 1
   hi Normal          guifg=#F8F8F2 guibg=#171812
-  hi Comment         guifg=#75715E
+  hi Comment         guifg=#75715E 
   hi CursorLine                    guibg=#3E3D32
   hi CursorColumn                  guibg=#3E3D32
   hi ColorColumn                   guibg=#3B3A32
@@ -135,7 +135,7 @@ if &t_Co > 255
     hi CursorLine               ctermbg=235   cterm=none
   else
     hi Normal       ctermfg=252 ctermbg=0
-    hi CursorLine               ctermbg=234   cterm=none
+    hi CursorLine               ctermbg=233   cterm=none
   endif
   hi Boolean         ctermfg=135
   hi Character       ctermfg=144
@@ -220,7 +220,7 @@ if &t_Co > 255
   hi Comment         ctermfg=59
   hi CursorColumn                ctermbg=234
   hi ColorColumn                 ctermbg=234
-  hi LineNr          ctermfg=59 ctermbg=235 cterm=bold
+  hi LineNr          ctermfg=59 ctermbg=234 cterm=bold
   hi CursorLineNR    ctermfg=190 ctermbg=234 cterm=bold
   hi NonText         ctermfg=59
 
