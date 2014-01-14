@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/dblack/code/twilio-ruby/lib/twilio-ruby/rest'
-let g:netrw_dirhist_2='/Users/dblack/code/twilio-python/docs/_themes'
-let g:netrw_dirhist_3='/Users/dblack/code/twilio-ruby/docs/api'
-let g:netrw_dirhist_4='/Users/dblack/code/twilio-python/.git'
-let g:netrw_dirhist_5='/Users/dblack/code/twilio-ruby/.git'
-let g:netrw_dirhist_6='/Users/dblack/code/twilio-ruby/lib/twilio-ruby/rest/sip'
-let g:netrw_dirhist_7='/Users/dblack/code/twilio-jsonapi'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/dblack/.virtualenvs'
