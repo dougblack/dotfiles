@@ -1,0 +1,139 @@
+<PcFileCache>
+  <File path="/Applications/Xamarin Studio.app/Contents/MacOS/lib/pkgconfig/monodevelop-core-addins.pc" lastWriteTime="2013-09-24T01:53:28-07:00" />
+  <File path="/Applications/Xamarin Studio.app/Contents/MacOS/lib/pkgconfig/monodevelop-core-mac-addins.pc" lastWriteTime="2013-09-24T01:53:28-07:00" />
+  <File path="/Applications/Xamarin Studio.app/Contents/MacOS/lib/pkgconfig/monodevelop.pc" lastWriteTime="2013-09-24T01:53:28-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/share/pkgconfig/gtk-doc.pc" lastWriteTime="2013-09-16T20:25:06-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/aspnetwebstack.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/atk.pc" lastWriteTime="2013-09-16T20:32:25-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/boo.pc" lastWriteTime="2013-09-16T21:08:50-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-fc.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-ft.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-gobject.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-pdf.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-png.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-ps.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-quartz-font.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-quartz-image.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-quartz.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-script.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo-svg.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cairo.pc" lastWriteTime="2013-09-16T20:29:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/cecil.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="cecil" version="3.2.3" description="Mono Internal Libraries -- Do not use" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="Mono.Cecil" version="0.9.5.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/Mono.Cecil/0.9.5.0__0738eb9f132ed756/Mono.Cecil.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/dotnet.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/dotnet35.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/fontconfig.pc" lastWriteTime="2013-09-16T20:28:11-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/freetype2.pc" lastWriteTime="2013-09-16T20:26:51-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gail.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gapi-2.0.pc" lastWriteTime="2013-09-16T21:08:37-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gdk-2.0.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gdk-pixbuf-2.0.pc" lastWriteTime="2013-09-16T20:32:51-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gdk-quartz-2.0.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gio-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gio-unix-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/glade-sharp-2.0.pc" lastWriteTime="2013-09-16T21:08:44-07:00" name="glade-sharp-2.0" version="2.12.21" description="Glade# - Glade .NET Binding" requires="gtk-sharp-2.0" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="glade-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/glade-sharp.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/glib-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/glib-sharp-2.0.pc" lastWriteTime="2013-09-16T21:08:38-07:00" name="glib-sharp-2.0" version="2.12.21" description="GLib# - .NET Binding for the glib library." targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="glib-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/glib-sharp.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gmodule-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gmodule-export-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gmodule-no-export-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gobject-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gthread-2.0.pc" lastWriteTime="2013-09-16T20:31:34-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk+-2.0.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk+-quartz-2.0.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk+-unix-print-2.0.pc" lastWriteTime="2013-09-16T20:36:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk-dotnet-2.0.pc" lastWriteTime="2013-09-16T21:08:45-07:00" name="gtk-dotnet-2.0" version="2.12.21" description=".NET Extensions for Gtk" requires="gtk-sharp-2.0" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="gtk-dotnet" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/gtk-dotnet.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk-engines-2.pc" lastWriteTime="2013-09-16T20:38:28-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/gtk-sharp-2.0.pc" lastWriteTime="2013-09-16T21:08:43-07:00" name="gtk-sharp-2.0" version="2.12.21" description="Gtk# - GNOME .NET Binding" requires="glib-sharp-2.0" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="pango-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/pango-sharp.dll" />
+    <Assembly name="atk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/atk-sharp.dll" />
+    <Assembly name="gdk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/gdk-sharp.dll" />
+    <Assembly name="gtk-sharp" version="2.12.0.0" culture="neutral" publicKeyToken="35e10195dab3c99f" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gtk-sharp-2.0/gtk-sharp.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/ige-mac-integration.pc" lastWriteTime="2013-09-16T20:37:14-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libcroco-0.6.pc" lastWriteTime="2013-09-16T20:37:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libffi.pc" lastWriteTime="2013-09-16T20:29:47-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libgdiplus.pc" lastWriteTime="2013-09-16T21:06:44-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libglade-2.0.pc" lastWriteTime="2013-09-16T20:36:45-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/liblzma.pc" lastWriteTime="2013-09-16T20:19:39-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libpng14.pc" lastWriteTime="2013-09-16T20:25:14-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/librsvg-2.0.pc" lastWriteTime="2013-09-16T20:37:58-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libtiff-4.pc" lastWriteTime="2013-09-16T20:25:49-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/libxml-2.0.pc" lastWriteTime="2013-09-16T20:26:31-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-2.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-addins-gui.pc" lastWriteTime="2013-09-16T21:17:37-07:00" name="mono-addins-gui" version="1.0" requires="mono-addins" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.Addins.Gui" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/mono-addins/Mono.Addins.Gui.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-addins-msbuild.pc" lastWriteTime="2013-09-16T21:17:36-07:00" name="mono-addins-msbuild" version="1.0" requires="mono-addins" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.Addins.MSBuild" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/mono-addins/Mono.Addins.MSBuild.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-addins-setup.pc" lastWriteTime="2013-09-16T21:17:34-07:00" name="mono-addins-setup" version="1.0" requires="mono-addins" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.Addins.Setup" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/mono-addins/Mono.Addins.Setup.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-addins.pc" lastWriteTime="2013-09-16T21:17:32-07:00" name="mono-addins" version="1.0" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.Addins" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/mono-addins/Mono.Addins.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-cairo.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-lineeditor.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-nunit.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="mono-nunit" version="3.2.3" description="Mono's version of NUnit" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="nunit.core" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.core.dll" />
+    <Assembly name="nunit.core.interfaces" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.core.interfaces.dll" />
+    <Assembly name="nunit.core.extensions" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.core.extensions.dll" />
+    <Assembly name="nunit.framework" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.framework.dll" />
+    <Assembly name="nunit.framework.extensions" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.framework.extensions.dll" />
+    <Assembly name="nunit.mocks" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.mocks.dll" />
+    <Assembly name="nunit.util" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit.util.dll" />
+    <Assembly name="nunit-console-runner" version="2.4.8.0" culture="neutral" publicKeyToken="96d09a1eb7f44a77" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/nunit-console-runner.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono-options.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/mono.web.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="mono.web" version="2.0.0.0" description="Mono ASP.NET extension classes" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="Mono.Web" version="2.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/Mono.Web/2.0.0.0__0738eb9f132ed756/Mono.Web.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/monodoc.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="monodoc" version="3.2.3" description="Monodoc - Mono Documentation Tools" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="monodoc" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/monodoc/monodoc.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/monosgen-2.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/pango.pc" lastWriteTime="2013-09-16T20:32:11-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/pangocairo.pc" lastWriteTime="2013-09-16T20:32:11-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/pixman-1.pc" lastWriteTime="2013-09-16T20:28:35-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/reactive.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="reactive" version="3.2.3" description="Reactive Extensions" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="System.Reactive.Interfaces" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Interfaces.dll" />
+    <Assembly name="System.Reactive.Core" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Core.dll" />
+    <Assembly name="System.Reactive.Linq" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Linq.dll" />
+    <Assembly name="System.Reactive.PlatformServices" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.PlatformServices.dll" />
+    <Assembly name="System.Reactive.Providers" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Providers.dll" />
+    <Assembly name="System.Reactive.Debugger" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Debugger.dll" />
+    <Assembly name="System.Reactive.Experimental" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Experimental.dll" />
+    <Assembly name="System.Reactive.Runtime.Remoting" version="2.1.30214.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/System.Reactive.Runtime.Remoting.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/sqlite3.pc" lastWriteTime="2013-09-16T20:36:55-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/system.web.extensions.design_1.0.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="system.web.extensions.design_1.0" version="1.0.61025.0" description="System.Web.Extensions.Design ASP.NET 2.0 add-on" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="System.Web.Extensions.Design" version="1.0.61025.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/System.Web.Extensions.Design/1.0.61025.0__31bf3856ad364e35/System.Web.Extensions.Design.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/system.web.extensions_1.0.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="system.web.extensions_1.0" version="1.0.61025.0" description="System.Web.Extensions ASP.NET 2.0 add-on" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="System.Web.Extensions" version="1.0.61025.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/System.Web.Extensions/1.0.61025.0__31bf3856ad364e35/System.Web.Extensions.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/system.web.mvc.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="system.web.mvc" version="1.0.0.0" description="System.Web.Mvc - ASP.NET MVC" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="System.Web.Mvc" version="1.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/System.Web.Mvc/1.0.0.0__31bf3856ad364e35/System.Web.Mvc.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/system.web.mvc2.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="system.web.mvc2" version="2.0.0.0" description="System.Web.Mvc - ASP.NET MVC v2" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="System.Web.Mvc" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/System.Web.Mvc/2.0.0.0__31bf3856ad364e35/System.Web.Mvc.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/system.web.mvc3.pc" lastWriteTime="2013-09-16T21:03:42-07:00" name="system.web.mvc3" version="3.0.0.0" description="System.Web.Mvc - ASP.NET MVC v3" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="System.Web.Mvc" version="3.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/gac/System.Web.Mvc/3.0.0.0__31bf3856ad364e35/System.Web.Mvc.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/wcf.pc" lastWriteTime="2013-09-16T21:03:42-07:00" />
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/xsp-2.pc" lastWriteTime="2013-09-16T21:07:08-07:00" name="xsp-2" version="3.0" description="Mono.WebServer2.dll - ASP.NET hosting support classes for .NET 2.0" targetFramework=".NETFramework,Version=v2.0">
+    <Assembly name="Mono.WebServer2" version="0.2.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/2.0/Mono.WebServer2.dll" />
+  </File>
+  <File path="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/pkgconfig/xsp-4.pc" lastWriteTime="2013-09-16T21:07:08-07:00" name="xsp-4" version="3.0" description="Mono.WebServer2.dll - ASP.NET hosting support classes for .NET 4.0" targetFramework=".NETFramework,Version=v4.0">
+    <Assembly name="Mono.WebServer2" version="0.4.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Library/Frameworks/Mono.framework/Versions/3.2.3/lib/mono/4.5/Mono.WebServer2.dll" />
+  </File>
+</PcFileCache>
