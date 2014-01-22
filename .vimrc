@@ -1,12 +1,11 @@
 " Douglas Black
 " Colors {{{
-set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
 colorscheme badwolf
 " }}}
 " Misc {{{
-set ttyfast
+set ttyfast                     " faster redraw
 set backspace=indent,eol,start
 set clipboard=unnamed
 " }}}
