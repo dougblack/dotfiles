@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="gallois"
+ZSH_THEME="dougblack"
 
 alias zshc="vi ~/.zshrc"
 alias zshs="source ~/.zshrc"
@@ -60,6 +60,9 @@ source /usr/local/Cellar/autojump/21.6.9/etc/autojump.zsh
 # Vars
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/heroku/bin:/Users/dblack/code/pytwilio.fab/venv/bin:/usr/local/sbin
 export REALM=dev
+export TWILIO_REALM=dev
+export TWILIO_ACCOUNT_SID=AC901aef5bb4a8877fa37c477b1fef659b
+export TWILIO_AUTH_TOKEN=162543df49013dbd9de46dc4ab40b37b
 export SVN_EDITOR=/usr/bin/vi
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
@@ -79,7 +82,7 @@ function virtualenv_info {
 
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/(vicmd|opp)/$VIM_PROMPT}/(main|viins)/}%{$fg[green]%}$(virtualenv_info)$(git_custom_status) $EPS1"
+    RPS1="${${KEYMAP/(vicmd|opp)/$VIM_PROMPT}/(main|viins)/}"
     zle reset-prompt
 }
 

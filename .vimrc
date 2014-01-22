@@ -3,38 +3,31 @@
 set t_Co=256            " use 256 colors by default
 syntax enable           " enable syntax processing
 set bg=dark             " set dark background
-"let g:molokai_original=1
-let g:CommandTMaxHeight = 10
-let g:solarized_termcolors = 16
-"colorscheme solarized
-"colorscheme tomorrow
-"colorscheme distinguished
 colorscheme badwolf
-hi NonText ctermfg=bg
 " }}}
 " Misc {{{
-filetype indent on
-set autoindent
-set modelines=1
-set wildmenu
-set lazyredraw
 set ttyfast
 set backspace=indent,eol,start
+set clipboard=unnamed
 " }}}
 " Spaces & Tabs {{{
-set tabstop=4           " 3 space tab
+set tabstop=4           " 4 space tab
 set expandtab           " use spaces for tabs
-set softtabstop=4       " 3 space tab
-set shiftwidth=4        " 3 space tab
+set softtabstop=4       " 4 space tab
+set shiftwidth=4
+set modelines=1
+filetype indent on
+set autoindent
 " }}}
 " UI Layout {{{
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
-"let &winheight = &lines * 85 / 100
+set wildmenu
+set lazyredraw
+set showmatch           " higlight matching parenthesis
 " }}}
 " Searching {{{
-set showmatch           " higlight matches for searching
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight all matches
@@ -45,14 +38,7 @@ set foldmethod=indent   " fold based on indent level
 set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
 nnoremap <space> za
-nnoremap <S-space> zM
-set foldlevel=10         " start with fold level of 1
-" }}}
-" Splits {{{
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+set foldlevelstart=10    " start with fold level of 1
 " }}}
 " Line Shortcuts {{{
 nnoremap j gj
@@ -84,16 +70,13 @@ nnoremap <leader>g :call RunGoFile()<CR>
 vnoremap <leader>y :w !pbcopy<CR><CR>
 inoremap jk <esc>
 " }}}
-"" Powerline {{{
+" Powerline {{{
 "set encoding=utf-8
-""let g:Powerline_colorscheme = 'solarized16_dark'
-" }}}
-
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 set laststatus=2
-
+" }}}
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
@@ -112,7 +95,6 @@ runtime! debian.vim
 set nocompatible
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
-call togglebg#map("<F5>")
 " }}}
 " Tmux {{{
 if exists('$TMUX') " allows cursor change in tmux mode
@@ -128,29 +110,29 @@ set guioptions-=r
 set guioptions-=L
 " }}}
 " AutoGroups {{{
-au VimEnter * highlight clear SignColumn
-au BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md :call <SID>StripTrailingWhitespaces()
-au FileType java set noexpandtab
-au FileType java set list
-au FileType java set list
-au FileType java set listchars=tab:+\ ,eol:¬
-au FileType java set formatprg=par\ -w80\ -T4
-au FileType php set noexpandtab
-au FileType php set list
-au FileType php set list
-au FileType php set listchars=tab:+\ ,eol:¬
-au FileType php set formatprg=par\ -w80\ -T4
-au FileType ruby set tabstop=2
-au FileType ruby set shiftwidth=2
-au FileType ruby set softtabstop=2
-au FileType ruby set commentstring=#\ %s
-au FileType python set commentstring=#\ %s
-au BufEnter *.cls set filetype=java
-au BufEnter *.zsh-theme set filetype=zsh
-au BufEnter Makefile set noexpandtab
-au BufEnter *.sh set tabstop=2
-au BufEnter *.sh set shiftwidth=2
-au BufEnter *.sh set softtabstop=2
+augroup configgroup
+    au VimEnter * highlight clear SignColumn
+    au BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md :call <SID>StripTrailingWhitespaces()
+    au FileType java set noexpandtab
+    au FileType java set list
+    au FileType java set listchars=tab:+\ ,eol:¬
+    au FileType java set formatprg=par\ -w80\ -T4
+    au FileType php set expandtab
+    au FileType php set list
+    au FileType php set listchars=tab:+\ ,eol:¬
+    au FileType php set formatprg=par\ -w80\ -T4
+    au FileType ruby set tabstop=2
+    au FileType ruby set shiftwidth=2
+    au FileType ruby set softtabstop=2
+    au FileType ruby set commentstring=#\ %s
+    au FileType python set commentstring=#\ %s
+    au BufEnter *.cls set filetype=java
+    au BufEnter *.zsh-theme set filetype=zsh
+    au BufEnter Makefile set noexpandtab
+    au BufEnter *.sh set tabstop=2
+    au BufEnter *.sh set shiftwidth=2
+    au BufEnter *.sh set softtabstop=2
+augroup END
 " }}}
 " Backups {{{
 set backup 
@@ -162,6 +144,7 @@ set writebackup
 " Custom Functions {{{
 function! ToggleNumber()
     if(&relativenumber == 1)
+        set norelativenumber
         set number
     else
         set relativenumber
@@ -208,12 +191,5 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 " }}}
-
-if &t_Co != 256 && ! has("gui_running")
-  echomsg ""
-  echomsg "err: please use GUI or a 256-color terminal (so that t_Co=256 could be set)"
-  echomsg ""
-  finish
-endif
 
 " vim:foldmethod=marker:foldlevel=0
