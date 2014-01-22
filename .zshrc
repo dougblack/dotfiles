@@ -60,9 +60,6 @@ source /usr/local/Cellar/autojump/21.6.9/etc/autojump.zsh
 # Vars
 export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/heroku/bin:/Users/dblack/code/pytwilio.fab/venv/bin:/usr/local/sbin
 export REALM=dev
-export TWILIO_REALM=dev
-export TWILIO_ACCOUNT_SID=AC901aef5bb4a8877fa37c477b1fef659b
-export TWILIO_AUTH_TOKEN=162543df49013dbd9de46dc4ab40b37b
 export SVN_EDITOR=/usr/bin/vi
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT='1'

@@ -110,27 +110,28 @@ set guioptions-=L
 " }}}
 " AutoGroups {{{
 augroup configgroup
-    au VimEnter * highlight clear SignColumn
-    au BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md :call <SID>StripTrailingWhitespaces()
-    au FileType java set noexpandtab
-    au FileType java set list
-    au FileType java set listchars=tab:+\ ,eol:¬
-    au FileType java set formatprg=par\ -w80\ -T4
-    au FileType php set expandtab
-    au FileType php set list
-    au FileType php set listchars=tab:+\ ,eol:¬
-    au FileType php set formatprg=par\ -w80\ -T4
-    au FileType ruby set tabstop=2
-    au FileType ruby set shiftwidth=2
-    au FileType ruby set softtabstop=2
-    au FileType ruby set commentstring=#\ %s
-    au FileType python set commentstring=#\ %s
-    au BufEnter *.cls set filetype=java
-    au BufEnter *.zsh-theme set filetype=zsh
-    au BufEnter Makefile set noexpandtab
-    au BufEnter *.sh set tabstop=2
-    au BufEnter *.sh set shiftwidth=2
-    au BufEnter *.sh set softtabstop=2
+    autocmd!
+    autocmd VimEnter * highlight clear SignColumn
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>CleanFile()
+    autocmd FileType java setlocal noexpandtab
+    autocmd FileType java setlocal list
+    autocmd FileType java setlocal listchars=tab:+\ ,eol:¬
+    autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType php setlocal expandtab
+    autocmd FileType php setlocal list
+    autocmd FileType php setlocal listchars=tab:+\ ,eol:¬
+    autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+    autocmd FileType ruby setlocal tabstop=2
+    autocmd FileType ruby setlocal shiftwidth=2
+    autocmd FileType ruby setlocal softtabstop=2
+    autocmd FileType ruby setlocal commentstring=#\ %s
+    autocmd FileType python setlocal commentstring=#\ %s
+    autocmd BufEnter *.cls setlocal filetype=java
+    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+    autocmd BufEnter Makefile setlocal noexpandtab
+    autocmd BufEnter *.sh setlocal tabstop=2
+    autocmd BufEnter *.sh setlocal shiftwidth=2
+    autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 " }}}
 " Backups {{{
@@ -180,12 +181,14 @@ function! RunTestsInFile()
     endif
 endfunction
 
-function! <SID>StripTrailingWhitespaces()
-    " save last search & cursor position
+function! <SID>CleanFile()
+    " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
     let c = col(".")
-    %s/\s\+$//e
+    " Do the business:
+    %!git stripspace
+    " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
 endfunction
