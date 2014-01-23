@@ -16,7 +16,7 @@ alias e="emacs"
 alias vi="vim"
 
 # Git
-alias gs="git s"
+alias gs="git status"
 alias gb="git branch"
 alias diff="git diff"
 alias log=". ~/.githelpers && pretty_git_log"
