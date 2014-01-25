@@ -1,7 +1,6 @@
 " Douglas Black
 " Colors {{{
 syntax enable           " enable syntax processing
-set bg=dark             " set dark background
 colorscheme badwolf
 " }}}
 " Misc {{{
@@ -16,6 +15,7 @@ set softtabstop=4       " 4 space tab
 set shiftwidth=4
 set modelines=1
 filetype indent on
+"filetype plugin on
 set autoindent
 " }}}
 " UI Layout {{{
@@ -23,7 +23,7 @@ set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set wildmenu
-set lazyredraw
+"set lazyredraw
 set showmatch           " higlight matching parenthesis
 " }}}
 " Searching {{{
@@ -46,7 +46,7 @@ nnoremap B ^
 nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
-nmap gV `[v`]
+nnoremap gV `[v`]
 " }}}
 " Leader Shortcuts {{{
 let mapleader=","
@@ -62,7 +62,7 @@ nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
 nnoremap <leader>a :Ag 
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
-nnoremap <leader>1 :call ToggleNoNumber()<CR>
+nnoremap <leader>1 :set number!<CR>
 nnoremap <leader>d :Make! 
 nnoremap <leader>r :call RunTestFile()<CR>
 nnoremap <leader>g :call RunGoFile()<CR>
@@ -93,7 +93,6 @@ let g:syntastic_ignore_files = ['.java$']
 runtime! debian.vim
 set nocompatible
 call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
 " }}}
 " Tmux {{{
 if exists('$TMUX') " allows cursor change in tmux mode
@@ -112,20 +111,7 @@ set guioptions-=L
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>CleanFile()
-    autocmd FileType java setlocal noexpandtab
-    autocmd FileType java setlocal list
-    autocmd FileType java setlocal listchars=tab:+\ ,eol:¬
-    autocmd FileType java setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType php setlocal expandtab
-    autocmd FileType php setlocal list
-    autocmd FileType php setlocal listchars=tab:+\ ,eol:¬
-    autocmd FileType php setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType ruby setlocal tabstop=2
-    autocmd FileType ruby setlocal shiftwidth=2
-    autocmd FileType ruby setlocal softtabstop=2
-    autocmd FileType ruby setlocal commentstring=#\ %s
-    autocmd FileType python setlocal commentstring=#\ %s
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
@@ -151,14 +137,6 @@ function! ToggleNumber()
     endif
 endfunc
 
-function! ToggleNoNumber()
-    if(&number == 1)
-        set nonumber
-    else
-        set number
-    endif
-endfunc
-
 function! RunTestFile()
     if(&ft=='python')
         exec ":!" . ". venv/bin/activate; nosetests " .bufname('%') . " --stop"
@@ -179,6 +157,18 @@ function! RunTestsInFile()
     elseif(&ft=='python')
         exec ":read !" . ". venv/bin/activate; nosetests " . bufname('%') 
     endif
+endfunction
+
+" strips trailing whitespace at the end of files. this
+" is called on buffer write in the autogroup above.
+function! <SID>StripTrailingWhitespaces()
+    " save last search & cursor position
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    let @/=_s
+    call cursor(l, c)
 endfunction
 
 function! <SID>CleanFile()

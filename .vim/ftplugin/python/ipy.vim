@@ -17,6 +17,8 @@
 "
 " written by Paul Ivanov (http://pirsquared.org)
 "
+
+setlocal commentstring=#\ %s
 if !has('python')
     " exit if python is not available.
     finish
