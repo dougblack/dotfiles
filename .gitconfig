@@ -1,0 +1,22 @@
+[user]
+    name = Doug Black
+    email = dblack@twilio.com
+[color]
+    ui = true
+    status = auto
+[diff]
+    tool = vimdiff
+    algorithm = patience
+[core]
+    editor = /usr/bin/vim
+[push]
+    default = simple
+[init]
+    templatedir = ~/.git_template
+[merge]
+    renamelimit = 2415
+[alias]
+    gl = log --graph --pretty=format:'%Cred%h%Creset - %Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    l = log --pretty=format:'%C(yellow)%h%Creset - %Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    wtf = "! git log --pretty=tformat:\"%C(auto,yellow)%h%C(auto)%d%C(auto,reset) by %C(auto,blue)%cn%C(auto,reset), %C(auto,cyan)%ar%C(auto,reset)%n %s%n\" --stat"
+    s = status --short
