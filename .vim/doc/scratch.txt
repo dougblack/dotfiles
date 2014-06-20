@@ -1,0 +1,91 @@
+*scratch.txt* Scratch and forget.                                       v1.0.0
+*Scratch*
+
+==============================================================================
+CONTENTS                                                     *ScratchContents*
+
+    1. Intro .............................. |ScratchIntro|
+    2. Commands ........................ |ScratchCommands|
+      2.1 |:Scratch|
+      2.2 |:ScratchInsert|
+      2.3 |:ScratchSelection|
+    3. Configuration ..................... |ScratchConfig|
+      3.1 |g:scratch_autohide|
+      3.2 |g:scratch_disable|
+      3.3 |g:scratch_height|
+      3.4 |g:scratch_top|
+    4. Changes .......................... |ScratchChanges|
+
+
+==============================================================================
+1. Intro                                                        *ScratchIntro*
+
+Unobtrusive scratch buffer.
+
+
+==============================================================================
+2. Commands                                                  *ScratchCommands*
+
+
+------------------------------------------------------------------------------
+2.1 :Scratch[!]                                                     *:Scratch* 
+
+Open scratch buffer. With [!], also clear scratch buffer.
+
+See |g:scratch_autohide|, |g:scratch_height|, and |g:scratch_top| for possible 
+configuration options.
+
+
+------------------------------------------------------------------------------
+2.2 :ScratchInsert[!]                               *:ScratchInsert* *gs* *gS*
+
+Open scratch buffer and go directly into insert mode. When open with this 
+command, the scratch buffer will also automatically close after leaving insert 
+mode.
+
+With [!] or when using the |gS| mapping, the buffer will also be cleared 
+before opening.
+
+
+------------------------------------------------------------------------------
+2.3 :ScratchSelection[!]                     *:ScratchSelection* *v_gs* *v_gS*
+
+Open scratch buffer and append current selection. 
+
+With [!] or when using the |v_gS| mapping, the buffer will also be cleared 
+before opening.
+
+
+==============================================================================
+3. Configuration                                               *ScratchConfig*
+
+------------------------------------------------------------------------------
+3.1 g:scratch_autohide = 1                                *g:scratch_autohide*
+
+Automatically close scratch buffer window when leaving said scratch buffer.
+Also allows Vim to quit when the scratch buffer is the last one displayed.
+
+
+------------------------------------------------------------------------------
+3.2 g:scratch_disable = 0                                  *g:scratch_disable*
+
+Disable plugin.
+
+
+------------------------------------------------------------------------------
+3.3 g:scratch_height = 10                                   *g:scratch_height*
+
+Height of the scratch window.
+
+
+------------------------------------------------------------------------------
+3.4 g:scratch_top = 1                                          *g:scratch_top*
+
+Open scratch window at the top of the screen instead of at the bottom.
+
+
+==============================================================================
+4. Changes                                                    *ScratchChanges*
+
+v1.0.0 (08/04/2013)
+  * Initial stable release.
