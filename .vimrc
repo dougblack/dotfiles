@@ -6,7 +6,6 @@ colorscheme badwolf
 " Misc {{{
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
-set clipboard=unnamed
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
@@ -15,13 +14,13 @@ set softtabstop=4       " 4 space tab
 set shiftwidth=4
 set modelines=1
 filetype indent on
-"filetype plugin on
+filetype plugin on
 set autoindent
 " }}}
 " UI Layout {{{
 set number              " show line numbers
 set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
+set nocursorline          " highlight current line
 set wildmenu
 "set lazyredraw
 set showmatch           " higlight matching parenthesis
@@ -47,6 +46,15 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 nnoremap gV `[v`]
+onoremap an :<c-u>call <SID>NextTextObject('a', 'f')<cr>
+xnoremap an :<c-u>call <SID>NextTextObject('a', 'f')<cr>
+onoremap in :<c-u>call <SID>NextTextObject('i', 'f')<cr>
+xnoremap in :<c-u>call <SID>NextTextObject('i', 'f')<cr>
+ 
+onoremap al :<c-u>call <SID>NextTextObject('a', 'F')<cr>
+xnoremap al :<c-u>call <SID>NextTextObject('a', 'F')<cr>
+onoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
+xnoremap il :<c-u>call <SID>NextTextObject('i', 'F')<cr>
 " }}}
 " Leader Shortcuts {{{
 let mapleader=","
@@ -66,21 +74,29 @@ nnoremap <leader>1 :set number!<CR>
 nnoremap <leader>d :Make! 
 nnoremap <leader>r :call RunTestFile()<CR>
 nnoremap <leader>g :call RunGoFile()<CR>
-vnoremap <leader>y :w !pbcopy<CR><CR>
+vnoremap <leader>y "+y
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 inoremap jk <esc>
 " }}}
 " Powerline {{{
 "set encoding=utf-8
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 set laststatus=2
 " }}}
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|\.(o|swp|pyc|egg)$'
+let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|target/|\.(o|swp|pyc|egg)$'
 " }}}
 " NERDTree {{{
 let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
@@ -94,15 +110,15 @@ runtime! debian.vim
 set nocompatible
 call pathogen#infect()
 " }}}
-" Tmux {{{
-if exists('$TMUX') " allows cursor change in tmux mode
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-" }}}
+"" Tmux {{{
+"if exists('$TMUX') " allows cursor change in tmux mode
+"    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+"else
+"    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"endif
+"" }}}
 " MacVim {{{
 set guioptions-=r 
 set guioptions-=L
@@ -155,7 +171,7 @@ function! RunTestsInFile()
     elseif(&ft=='go')
         exec ":!gp test"
     elseif(&ft=='python')
-        exec ":read !" . ". venv/bin/activate; nosetests " . bufname('%') 
+        exec ":read !" . ". venv/bin/activate; nosetests " . bufname('%') . " --nocapture"
     endif
 endfunction
 
@@ -181,6 +197,20 @@ function! <SID>CleanFile()
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
+endfunction
+ 
+function! s:NextTextObject(motion, dir)
+  let c = nr2char(getchar())
+ 
+  if c ==# "b"
+      let c = "("
+  elseif c ==# "B"
+      let c = "{"
+  elseif c ==# "r"
+      let c = "["
+  endif
+ 
+  exe "normal! ".a:dir.c."v".a:motion.c
 endfunction
 " }}}
 
