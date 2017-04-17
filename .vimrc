@@ -53,7 +53,8 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>et :exec ":vsp /Users/dblack/notes/vim/" . strftime('%m-%d-%y') . ".md"<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>l :call ToggleNumber()<CR>
+nnoremap <leader>l :call ToggleRelativeNumber()<CR>
+nnoremap <leader>tl :call ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
 nnoremap <leader>a :Ag 
@@ -128,13 +129,20 @@ let g:airline_right_sep = ''
 let g:airline_right_sep = ''
 " }}}
 " Custom Functions {{{
-function! ToggleNumber()
+function! ToggleRelativeNumber()
     if(&relativenumber == 1)
         set norelativenumber
         set number
     else
         set relativenumber
     endif
+endfunc
+
+function! ToggleNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+  endif
+  set invnumber
 endfunc
 
 " strips trailing whitespace at the end of files. this
