@@ -7,6 +7,7 @@ set termguicolors
 " Misc {{{
 set backspace=indent,eol,start
 let g:vimwiki_list = [{'path': '~/.wiki/'}]
+set clipboard=unnamed
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
@@ -53,15 +54,16 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>et :exec ":vsp /Users/dblack/notes/vim/" . strftime('%m-%d-%y') . ".md"<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>l :call ToggleNumber()<CR>
+nnoremap <leader>l :call <SID>ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
 nnoremap <leader>a :Ag 
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :set number!<CR>
-nnoremap <leader>d :Make! 
-nnoremap <leader>r :TestFile<CR>
-nnoremap <leader>g :call RunGoFile()<CR>
+nnoremap <leader>d :GoDoc 
+nnoremap <leader>t :TestFile<CR>
+nnoremap <leader>r :call <SID>RunFile()<CR>
+nnoremap <leader>b :call <SID>BuildFile()<CR>
 vnoremap <leader>y "+y
 " }}}
 
@@ -89,6 +91,8 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal softtabstop=2
     autocmd BufEnter *.py setlocal tabstop=4
     autocmd BufEnter *.md setlocal ft=markdown
+    autocmd BufEnter *.go setlocal noexpandtab
+    autocmd BufEnter *.avsc setlocal ft=json
 augroup END
 " }}}
 " Testing {{{
@@ -106,6 +110,8 @@ set writebackup
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'derekwyatt/vim-scala'
+Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
 Plug 'keith/swift.vim'
 Plug 'kien/ctrlp.vim'
@@ -128,7 +134,7 @@ let g:airline_right_sep = ''
 let g:airline_right_sep = ''
 " }}}
 " Custom Functions {{{
-function! ToggleNumber()
+function! <SID>ToggleNumber()
     if(&relativenumber == 1)
         set norelativenumber
         set number
@@ -147,7 +153,7 @@ function! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     let @/=_s
     call cursor(l, c)
-endfunction
+endfunc
 
 function! <SID>CleanFile()
     " Preparation: save last search, and cursor position.
@@ -159,7 +165,21 @@ function! <SID>CleanFile()
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
-endfunction
+endfunc
+
+function! <SID>RunFile()
+    let ext = expand("%:e")
+    if(ext == "go") 
+        :GoRun
+    endif
+endfunc
+
+function! <SID>BuildFile()
+    let ext = expand("%:e")
+    if(ext == "go") 
+        :GoBuild
+    endif
+endfunc
 " }}}
 "
 
