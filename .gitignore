@@ -1,1 +1,5 @@
 *.cache
+.config/tmux/plugins/
+.config/iterm2/
+lazy-lock.json
+.config/gh/

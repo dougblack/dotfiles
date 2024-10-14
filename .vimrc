@@ -1,7 +1,7 @@
 " Douglas Black
 " Colors {{{
 syntax enable           " enable syntax processing
-colorscheme badwolf
+" colorscheme badwolf
 set termguicolors
 " }}}
 " Misc {{{
