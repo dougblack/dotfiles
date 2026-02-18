@@ -30,6 +30,9 @@ require("config.lazy")
 -- Colors
 vim.cmd.colorscheme("catppuccin")
 
+-- Helpers
+vim.keymap.set("i", "<C-t>", "<C-r>=strftime('%Y-%m-%d')<CR>") -- datestamp
+
 -- Edit Configs
 vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>ev", ":tabe ~/.config/nvim/init.lua<CR>")
@@ -41,8 +44,9 @@ vim.keymap.set("n", "<leader>m", ":RenderMarkdown buf_toggle<CR>")
 vim.keymap.set("n", "<leader><tab>h", ":tabp<CR>")
 vim.keymap.set("n", "<leader><tab>l", ":tabn<CR>")
 
--- Notes
+-- Neorg
 vim.keymap.set("n", "<leader>n", ":Neorg workspace notes<CR>")
+vim.keymap.set("n", "<leader>j", ":Neorg journal<CR>")
 
 -- File Explorer
 require("oil").setup()
@@ -69,6 +73,18 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Telescope help tags" })
 
+require("telescope").setup({
+	defaults = {},
+	extensions = {},
+})
+
+vim.api.nvim_create_autocmd("User", {
+	pattern = "TelescopePreviewerLoaded",
+	callback = function(args)
+		vim.wo.number = true
+	end,
+})
+
 -- Diagnostics
 local function diagnostic_toggle(setting)
 	return function()
@@ -85,15 +101,3 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- LSP configs
 vim.lsp.set_log_level("off")
-
-require("telescope").setup({
-	defaults = {},
-	extensions = {},
-})
-
-vim.api.nvim_create_autocmd("User", {
-	pattern = "TelescopePreviewerLoaded",
-	callback = function(args)
-		vim.wo.number = true
-	end,
-})

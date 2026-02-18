@@ -14,8 +14,22 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
-			ensure_installed = { "python", "ruby", "lua", "vim", "query", "go" },
+			ensure_installed = {
+				"c",
+				"go",
+				"lua",
+				"python",
+				"query",
+				"query",
+				"ruby",
+				"vim",
+				"vimdoc",
+			},
+			highlight = { enable = true },
 		},
+		config = function(_, opts)
+			require("nvim-treesitter.configs").setup(opts)
+		end,
 	},
 	{
 		"stevanmilic/nvim-lspimport",
@@ -66,10 +80,13 @@ return {
 							workspaces = {
 								notes = "~/notes",
 							},
+							default_workspace = "notes",
 						},
 					},
 				},
 			})
+			vim.wo.foldlevel = 99
+			vim.wo.conceallevel = 2
 		end,
 	},
 	-- Testing

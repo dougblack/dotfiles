@@ -8,7 +8,7 @@
     tool = vimdiff
     algorithm = patience
 [core]
-    editor = /usr/bin/vim
+    editor = nvim
 [push]
     default = simple
 [init]
