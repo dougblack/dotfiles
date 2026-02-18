@@ -45,3 +45,4 @@ alias ...="cd ../.."
 # SSH STRING
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+source /Users/doug/.keys
