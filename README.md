@@ -1,17 +1,12 @@
 # Doug's Dotfiles
 
+My config files. I use [`stow`](https://www.gnu.org/software/stow/) to symlink
+all of them to their proper location in my home directory.
+
 ## Installation
 
-Clone repo and install `stow`.
-
-```bash
+```
 git clone git@github.com:dougblack/dotfiles.git
-brew install stow
-```
-
-Then we use `stow` to create symlinks to all of the config files in this repo.
-
-```
 cd dotfiles
-stow git zsh tmux nvim
+make install
 ```
